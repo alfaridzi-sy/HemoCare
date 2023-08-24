@@ -1,99 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>
-        Login | UMKM2M Kecamatan Siantar Marimbun
-    </title>
-    <!-- Favicon -->
-    <link href="{{ asset('master/assets/img/fav.png') }}" rel="icon" type="image/png">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
-    <!-- Icons -->
-    <link href="{{ asset('master/assets/js/plugins/nucleo/css/nucleo.css')}}" rel="stylesheet" />
-    <link href="{{ asset('master/assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css')}}" rel="stylesheet" />
-    <!-- CSS Files -->
-    <link href="{{ asset('master/assets/css/argon-dashboard.css?v=1.1.0')}}" rel="stylesheet" />
-</head>
+<!-- beautify ignore:start -->
+<html
+    lang="en"
+    class="light-style customizer-hide"
+    dir="ltr"
+    data-theme="theme-default"
+    data-assets-path="{{ asset('master/assets/') }}"
+    data-template="vertical-menu-template-free"
+>
+    <head>
+        <meta charset="utf-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+        />
 
-<body class="bg-default">
-    <div class="main-content">
+        <title>Login | HemoCare RSU Mitra Sejati</title>
 
-        <!-- Header -->
-        <div class="header bg-gradient-warning py-7 py-lg-8">
-            <div class="separator separator-bottom separator-skew zindex-100">
-                <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
-                    <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
-                </svg>
-            </div>
-        </div>
+        <meta name="description" content="" />
 
-        <!-- Page content -->
-        <div class="container mt--8 pb-5">
-            <div class="row justify-content-center">
-                <div class="col-lg-5 col-md-7">
-                    <div class="card bg-secondary shadow border-0">
-                        <div class="card-header bg-transparent pb-3">
-                            <div class="text-muted text-center mt-2 mb-3">
-                                <h1 class="text-dark"><strong>Sign in</strong></h1>
-                                <p class="text-lead text-dark">Selamat Datang di Sistem UMKM2M Kecamatan Siantar Marimbun</p>
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href= "{{ asset('master/assets/img/favicon/mitra_bg.jpeg') }}" />
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Icons. Uncomment required icon fonts -->
+        <link rel="stylesheet" href="{{ asset('master/assets/vendor/fonts/boxicons.css') }}" />
+
+        <!-- Core CSS -->
+        <link rel="stylesheet" href="{{ asset('master/assets/vendor/css/core.css') }}" class="template-customizer-core-css" />
+        <link rel="stylesheet" href="{{ asset('master/assets/vendor/css/theme-default.css') }}" class="template-customizer-theme-css" />
+        <link rel="stylesheet" href="{{ asset('master/assets/css/demo.css') }}" />
+
+        <!-- Vendors CSS -->
+        <link rel="stylesheet" href="{{ asset('master/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
+
+        <style>
+            /* Styles for responsive logo */
+            .responsive-logo {
+                max-width: 90%;
+            }
+
+            /* Media query for smaller screens */
+            @media (max-width: 768px) {
+                .responsive-logo {
+                    max-width: 50%; /* You can adjust this value as needed */
+                }
+            }
+        </style>
+
+        <!-- Page CSS -->
+        <!-- Page -->
+        <link rel="stylesheet" href="{{ asset('master/assets/vendor/css/pages/page-auth.css') }}" />
+        <!-- Helpers -->
+        <script src="{{ asset('master/assets/vendor/js/helpers.js') }}"></script>
+
+        <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+        <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+        <script src="{{ asset('master/assets/js/config.js') }}"></script>
+    </head>
+
+    <body>
+        <!-- Content -->
+        <div class="container-xxl">
+            <div class="authentication-wrapper authentication-basic container-p-y">
+                <div class="authentication-inner">
+                    <!-- Register -->
+                    <div class="card">
+                        <div class="card-body">
+                            <!-- Logo -->
+                            <div class="app-brand justify-content-center text-center">
+                                <a href="#" class="app-brand-link gap-2">
+                                    <span class="app-brand-logo demo gap-2">
+                                        <img src="{{ asset('master/assets/img/hemo_care.png') }}" alt="HemoCare Logo" class="responsive-logo">
+                                    </span>
+                                </a>
                             </div>
-                        </div>
-                        <div class="card-body px-lg-5 py-lg-5">
-                            <form role="form" method="POST" action="{{ route('authenticate') }}">
+                            <!-- /Logo -->
+
+                            <form id="formAuthentication" class="mb-3" action="{{ route('authenticate') }}" method="POST">
                                 @csrf
-                                <div class="form-group mb-3">
-                                    <div class="input-group input-group-alternative">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="ni ni-single-02"></i></span>
-                                        </div>
-                                        <input id="username" type="username" class="form-control @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username" placeholder="Username" autofocus>
-                                    </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Username</label>
+                                    <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan Username Anda" autofocus/>
                                 </div>
-                                <div class="form-group">
-                                    <div class="input-group input-group-alternative">
-                                        <div class="input-group-prepend">
-                                            <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
-                                        </div>
+                                <div class="mb-3 form-password-toggle">
+                                    <div class="d-flex justify-content-between">
+                                        <label class="form-label" for="password">Password</label>
+                                    </div>
+                                    <div class="input-group input-group-merge">
                                         <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password"  placeholder="Password">
+                                        <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
                                     </div>
                                 </div>
-                                <div class="text-center">
-                                <button type="submit" class="btn btn-default my-4">Sign in</button>
+                                <div class="mb-3">
+                                <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
                                 </div>
                             </form>
                         </div>
                     </div>
+                    <!-- /Register -->
                 </div>
             </div>
         </div>
+        <!-- / Content -->
 
-        <footer class="py-7">
-            <div class="container">
-                <div class="copyright text-center text-xl-center text-muted">
-                    <p class="text-dark">
-                        Copyright © 2022 <a href="#" class="font-weight-bold ml-1 text-center text-danger">Made by Love</a>
-                    </p>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <!--   Core   -->
-    <script src="{{ asset('master/assets/js/plugins/jquery/dist/jquery.min.js')}}"></script>
-    <script src="{{ asset('master/assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js')}}"></script>
-    <!--   Optional JS   -->
-    <!--   Argon JS   -->
-    <script src="{{ asset('master/assets/js/argon-dashboard.min.js?v=1.1.0')}}"></script>
-    <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
-    <script>
-        window.TrackJS &&
-        TrackJS.install({
-            token: "ee6fab19c5a04ac1a32a645abde4613a",
-            application: "argon-dashboard-free"
-        });
-    </script>
-</body>
+        <!-- Core JS -->
+        <!-- build:js assets/vendor/js/core.js -->
+        <script src="{{ asset('master/assets/vendor/libs/jquery/jquery.js') }}"></script>
+        <script src="{{ asset('master/assets/vendor/libs/popper/popper.js') }}"></script>
+        <script src="{{ asset('master/assets/vendor/js/bootstrap.js') }}"></script>
+        <script src="{{ asset('master/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
 
+        <script src="{{ asset('master/assets/vendor/js/menu.js') }}"></script>
+        <!-- endbuild -->
+
+        <!-- Vendors JS -->
+
+        <!-- Main JS -->
+        <script src="{{ asset('master/assets/js/main.js') }}"></script>
+
+        <!-- Page JS -->
+
+        <!-- Place this tag in your head or just before your close body tag. -->
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+    </body>
 </html>
