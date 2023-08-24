@@ -21,7 +21,7 @@
         <meta name="description" content="" />
 
         <!-- Favicon -->
-        <link rel="icon" type="image/x-icon" href= "{{ asset('master/assets/img/favicon/mitra_bg.jpeg') }}" />
+        <link rel="icon" type="image/x-icon" href= "{{ asset('master/assets/img/favicon/icon.ico') }}" />
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -45,13 +45,13 @@
         <style>
             /* Styles for responsive logo */
             .responsive-logo {
-                max-width: 90%;
+                max-width: 30%;
             }
 
             /* Media query for smaller screens */
             @media (max-width: 768px) {
                 .responsive-logo {
-                    max-width: 50%; /* You can adjust this value as needed */
+                    max-width: 25%; /* You can adjust this value as needed */
                 }
             }
         </style>
@@ -78,7 +78,7 @@
                             <!-- Logo -->
                             <div class="app-brand justify-content-center text-center">
                                 <a href="#" class="app-brand-link gap-2">
-                                    <span class="app-brand-logo demo gap-2">
+                                    <span class="app-brand-logo demo">
                                         <img src="{{ asset('master/assets/img/hemo_care.png') }}" alt="HemoCare Logo" class="responsive-logo">
                                     </span>
                                 </a>
