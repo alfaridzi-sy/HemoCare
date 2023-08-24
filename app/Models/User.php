@@ -35,4 +35,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password'
     ];
+
+    public function bed()
+    {
+        return $this->hasMany('App\Models\bed');
+    }
+
+    public function bed_usage()
+    {
+        return $this->hasMany('App\Models\BedUsage');
+    }
 }

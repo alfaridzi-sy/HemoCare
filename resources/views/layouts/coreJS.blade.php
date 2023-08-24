@@ -16,5 +16,23 @@
 <!-- Page JS -->
 <script src="{{ asset('master/assets/js/dashboards-analytics.js') }}"></script>
 
+<script>
+    // Ambil URL saat ini
+    var currentUrl = window.location.href;
+
+    // Ambil semua elemen <a> di dalam menu
+    var menuLinks = document.querySelectorAll('.menu-link');
+
+    // Loop melalui setiap elemen <a> di dalam menu
+    menuLinks.forEach(function(link) {
+        // Bandingkan href dari elemen <a> dengan URL saat ini
+        if (link.getAttribute('href') === currentUrl) {
+            // Tambahkan kelas 'active' jika cocok
+            link.closest('.menu-item').classList.add('active');
+        }
+    });
+</script>
+
+
 <!-- Place this tag in your head or just before your close body tag. -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>

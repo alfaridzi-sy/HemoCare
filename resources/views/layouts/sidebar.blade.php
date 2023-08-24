@@ -16,7 +16,7 @@
     <ul class="menu-inner py-1">
         <!-- Dashboard -->
         <li class="menu-item active">
-            <a href="" class="menu-link">
+            <a href="/dashboard" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
             </a>
@@ -28,13 +28,13 @@
         </li>
 
         <li class="menu-item">
-            <a href="" class="menu-link">
+            <a href="/dashboard" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-user-account"></i>
                 <div data-i18n="Pengaturan Akun">Pengaturan Akun</div>
             </a>
         </li>
         <li class="menu-item">
-            <a href="" class="menu-link">
+            <a href="/dashboard" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-bed"></i>
                 <div data-i18n="Tempat Tidur">Tempat Tidur</div>
             </a>
@@ -44,7 +44,7 @@
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Penggunaan Bed</span></li>
 
         <li class="menu-item">
-            <a href="" class="menu-link">
+            <a href="/dashboard" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-wrench"></i>
                 <div data-i18n="Manajemen Status">Manajemen Status</div>
             </a>
@@ -55,7 +55,7 @@
 
         </li>
         <li class="menu-item">
-            <a href="" class="menu-link">
+            <a href="/dashboard" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-file"></i>
                 <div data-i18n="Manajemen Status">Riwayat Pelayanan</div>
             </a>
