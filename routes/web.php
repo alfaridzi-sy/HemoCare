@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BedController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,5 +32,8 @@ Route::middleware(['auth'])->group(function () {
 
     //Akun
     Route::resource('user',UserController::class);
+
+    //Tempat Tidur
+    Route::resource('bed',BedController::class);
 });
 

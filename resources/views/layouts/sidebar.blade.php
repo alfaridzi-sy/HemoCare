@@ -34,7 +34,7 @@
             </a>
         </li>
         <li class="menu-item">
-            <a href="/dashboard" class="menu-link">
+            <a href="/bed" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-bed"></i>
                 <div data-i18n="Tempat Tidur">Tempat Tidur</div>
             </a>
