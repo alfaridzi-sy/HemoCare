@@ -3,6 +3,7 @@
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,6 +29,7 @@ Route::middleware(['auth'])->group(function () {
     //Dashboard
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
-    //User Setting
+    //Akun
+    Route::resource('user',UserController::class);
 });
 

@@ -42,6 +42,7 @@
         <!-- Vendors CSS -->
         <link rel="stylesheet" href="{{ asset('master/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
 
+        <!-- Page CSS -->
         <style>
             /* Styles for responsive logo */
             .responsive-logo {
@@ -56,7 +57,6 @@
             }
         </style>
 
-        <!-- Page CSS -->
         <!-- Page -->
         <link rel="stylesheet" href="{{ asset('master/assets/vendor/css/pages/page-auth.css') }}" />
         <!-- Helpers -->
@@ -96,7 +96,7 @@
                                         <label class="form-label" for="password">Password</label>
                                     </div>
                                     <div class="input-group input-group-merge">
-                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password"  placeholder="Password">
+                                        <input type="password" class="form-control" id="password" name="password"  placeholder="Masukkan Password Anda" autofocus/>
                                         <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
                                     </div>
                                 </div>
