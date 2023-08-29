@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('page_title')
-    Tambah Akun | HemoCare RSU Mitra Sejati
+    Tambah Akun | Kidney Care RSU Mitra Sejati
 @endsection
 
 @section('content')

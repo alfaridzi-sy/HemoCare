@@ -20,6 +20,6 @@ class Bed extends Model
 
     public function bed_usage()
     {
-        return $this->hasMany('App\Models\BedUsage');
+        return $this->hasMany('App\Models\BedUsage', 'bed_id');
     }
 }

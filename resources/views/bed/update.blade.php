@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('page_title')
-    Ubah Data Tempat Tidur | HemoCare RSU Mitra Sejati
+    Ubah Data Tempat Tidur | Kidney Care RSU Mitra Sejati
 @endsection
 
 @section('content')

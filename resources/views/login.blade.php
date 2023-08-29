@@ -16,7 +16,7 @@
             content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
         />
 
-        <title>Login | HemoCare RSU Mitra Sejati</title>
+        <title>Login | Kidney Care RSU Mitra Sejati</title>
 
         <meta name="description" content="" />
 
@@ -79,7 +79,7 @@
                             <div class="app-brand justify-content-center text-center">
                                 <a href="#" class="app-brand-link gap-2">
                                     <span class="app-brand-logo demo">
-                                        <img src="{{ asset('master/assets/img/hemo_care.png') }}" alt="HemoCare Logo" class="responsive-logo">
+                                        <img src="{{ asset('master/assets/img/kidney_care.png') }}" alt="Kidney Care Logo" class="responsive-logo">
                                     </span>
                                 </a>
                             </div>

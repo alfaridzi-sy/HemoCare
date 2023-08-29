@@ -18,7 +18,8 @@ return new class extends Migration
             $table->datetime('start_time');
             $table->datetime('finish_time');
             $table->integer('service_time');
-            $table->string('additional_information');
+            $table->integer('service_status');
+            $table->string('additional_information')->nullable();
             $table->unsignedBigInteger('uploaded_by');
             $table->foreign('uploaded_by')->references('user_id')->on('users')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();

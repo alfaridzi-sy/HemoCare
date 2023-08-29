@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('page_title')
-    Daftar Tempat Tidur | HemoCare RSU Mitra Sejati
+    Daftar Tempat Tidur | Kidney Care RSU Mitra Sejati
 @endsection
 
 @section('content')

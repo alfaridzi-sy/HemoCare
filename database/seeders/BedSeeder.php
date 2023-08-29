@@ -15,7 +15,7 @@ class BedSeeder extends Seeder
     {
         DB::table('beds')->insert([
             [
-                'status'        => 0,
+                'status'        => 1,
                 'bed_number'    => '01',
                 'uploaded_by'   => 1,
                 'created_at'    => Carbon::now(),

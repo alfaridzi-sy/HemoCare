@@ -11,7 +11,7 @@ class BedUsage extends Model
 
     protected $table        = 'bed_usages';
     protected $primaryKey   = 'bed_usage_id';
-    protected $fillable     = ['bed_id','start_time', 'finish_time', 'service_time', 'additional_information', 'uploaded_by'];
+    protected $fillable     = ['bed_id','start_time', 'finish_time', 'service_time', 'service_status', 'additional_information', 'uploaded_by'];
 
     public function user()
     {

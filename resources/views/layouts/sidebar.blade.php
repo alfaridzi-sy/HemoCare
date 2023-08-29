@@ -2,7 +2,7 @@
     <div class="app-brand demo">
         <a href="#" class="app-brand-link">
             <span class="app-brand-logo demo">
-                <img src="{{ asset('master/assets/img/hemo_care.png') }}" alt="HemoCare Logo" class="responsive-logo">
+                <img src="{{ asset('master/assets/img/kidney_care.png') }}" alt="Kidney Care Logo" class="responsive-logo">
             </span>
         </a>
 
@@ -22,6 +22,7 @@
             </a>
         </li>
 
+        @if(auth()->user()->role != "Petugas")
         <!-- Data Master -->
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Data Master</span>
@@ -39,12 +40,13 @@
                 <div data-i18n="Tempat Tidur">Tempat Tidur</div>
             </a>
         </li>
+        @endif
 
         <!-- Penggunaan Bed -->
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Penggunaan Bed</span></li>
 
         <li class="menu-item">
-            <a href="/dashboard" class="menu-link">
+            <a href="daftarBed" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-wrench"></i>
                 <div data-i18n="Manajemen Status">Manajemen Status</div>
             </a>
@@ -55,7 +57,7 @@
 
         </li>
         <li class="menu-item">
-            <a href="/dashboard" class="menu-link">
+            <a href="javascript:void(0);" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-file"></i>
                 <div data-i18n="Manajemen Status">Riwayat Pelayanan</div>
             </a>

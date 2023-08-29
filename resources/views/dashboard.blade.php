@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('page_title')
-    Dashboard | HemoCare RSU Mitra Sejati
+    Dashboard | Kidney Care RSU Mitra Sejati
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@
                             <div class="card-body">
                                 <h5 class="card-title text-primary">Selamat Datang! 🎉</h5>
                                 <p class="mb-4">
-                                    "Selamat datang di HemoCare!
+                                    "Selamat datang di Kidney Care!
                                     Anda adalah bagian penting dalam pengelolaan data layanan hemodialisa."
                                 </p>
                             </div>

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BedController;
+use App\Http\Controllers\HemodialisaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,10 +18,7 @@ use App\Http\Controllers\BedController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
+Route::get('/', [HemodialisaController::class, 'display'])->name('display');
 //Login
 Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::post('authenticate', [LoginController::class, 'authenticate'])->name('authenticate');
@@ -35,5 +33,11 @@ Route::middleware(['auth'])->group(function () {
 
     //Tempat Tidur
     Route::resource('bed',BedController::class);
+
+    //Manajemen Status
+    Route::get('daftarBed', [HemodialisaController::class, 'daftarBed'])->name('hemodialisa.daftarBed');
+    Route::post('storeBedUsage', [HemodialisaController::class, 'storeBedUsage'])->name('hemodialisa.storeBedUsage');
+    Route::post('bedRelease', [HemodialisaController::class, 'bedRelease'])->name('hemodialisa.bedRelease');
+    Route::post('finishUsage', [HemodialisaController::class, 'finishUsage'])->name('hemodialisa.finishUsage');
 });
 

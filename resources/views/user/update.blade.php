@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('page_title')
-    Ubah Data Akun | HemoCare RSU Mitra Sejati
+    Ubah Data Akun | Kidney Care RSU Mitra Sejati
 @endsection
 
 @section('content')

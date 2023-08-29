@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('page_title')
-    Daftar Akun | HemoCare RSU Mitra Sejati
+    Daftar Akun | Kidney Care RSU Mitra Sejati
 @endsection
 
 @section('content')
